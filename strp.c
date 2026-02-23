@@ -1,8 +1,8 @@
-//
-// Pointer style implementation of str.h
-// COS 217: Assignment 2
-// Abdulkadir Husein
-//
+/*
+Pointer style implementation of str.h
+COS 217: Assignment 2
+Abdulkadir Husein
+*/
 
 #include <assert.h>
 #include <stddef.h>

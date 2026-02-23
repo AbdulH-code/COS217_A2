@@ -1,8 +1,8 @@
-//
-// Array style implementation of str.h
-// COS 217: Assignment 2
-// Abdulkadir Husein
-//
+/*
+Array style implementation of str.h
+COS 217: Assignment 2
+Abdulkadir Husein
+*/
 
 #include <stddef.h>
 #include <assert.h>
