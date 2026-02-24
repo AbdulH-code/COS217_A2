@@ -2,7 +2,7 @@ Assignment 2 readme File
 
 ------------------------------------------------------------------------
 What is your name?
-
+Abdulkadir Husein
 
 
 ------------------------------------------------------------------------
@@ -11,7 +11,8 @@ assignment? COPY THE LIST of authorized sources of information given
 in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
-
+the course's lectures, precepts, website, textbooks and manuals (including the man pages from the armlab cluster)
+a Large Language Model or other Generative AI
 
 
 ------------------------------------------------------------------------
@@ -25,6 +26,7 @@ may trigger a course penalty, and depending on the nature of the
 interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
+None
 
 
 
@@ -35,7 +37,7 @@ enter your name in the space below the following affirmation:
 
 This paper represents my own work in accordance with University
 regulations.
-
+Abdulkadir Husein
 
 
 ------------------------------------------------------------------------
@@ -43,12 +45,14 @@ In fulfillment of the requirement from section 2.4.6 of the Academic
 Regulations in Princeton's Rights, Rules, Responsibilities guide,
 and the COS 217 Generative AI policy, disclose and describe how you
 used AI in completing this assignment:
-
+I used Gen AI to help me implement the replaceAndWrite function in
+replace.c
 
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
-
+The assignment helped me better understand pointers and how they should
+be used in code.
 
 
 ------------------------------------------------------------------------
@@ -63,6 +67,7 @@ What warnings does splint generate on stra.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
+None
 
 
 
@@ -71,6 +76,7 @@ What warnings does critTer generate on stra.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
+None
 
 
 
@@ -79,6 +85,7 @@ What warnings does splint generate on strp.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
+None
 
 
 
@@ -87,6 +94,7 @@ What warnings does critTer generate on strp.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
+None
 
 
 
@@ -95,6 +103,7 @@ What warnings does splint generate on replace.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
+None
 
 
 
@@ -103,6 +112,7 @@ What warnings does critTer generate on replace.c, and what are your
 disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
+None
 
 
 
@@ -110,6 +120,10 @@ write "None."
 Is it possible for Str_copy or Str_concat to call assert to verify
 that the destination memory area specified by the caller is large
 enough? Explain.
+No. We have no way of determining how much size was allocated for the strings
+based on the arguments we are given. The pointers that are passed into the
+function simply tell us where the strings begin, they don't tell us how
+much memory was allocated for the string.
 
 
 
