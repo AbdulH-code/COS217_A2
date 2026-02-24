@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------*/
 /* replace.c                                                          */
-/* Author: ???                                                        */
+/* Author: Abdulkadir Husein                                          */
 /*--------------------------------------------------------------------*/
 
 #include "str.h"
@@ -20,7 +20,46 @@
 static size_t replaceAndWrite(const char *pcLine,
                               const char *pcFrom, const char *pcTo)
 {
-   /* Insert your code here. */
+    const char *pcPos;
+    const char *pcCurrent;
+    size_t fromLen;
+    size_t count;
+
+    assert(pcLine != NULL);
+    assert(pcFrom != NULL);
+    assert(pcTo != NULL);
+
+    count = 0;
+    fromLen = Str_getLength(pcFrom);
+
+    /* If pcFrom is empty, print line and return 0 */
+    if (fromLen == 0) {
+        fputs(pcLine, stdout);
+        return 0;
+    }
+
+    pcCurrent = pcLine;
+
+    while ((pcPos = Str_search(pcCurrent, pcFrom)) != NULL) {
+
+        /* Write characters before the match */
+        while (pcCurrent < pcPos) {
+            fputc(*pcCurrent, stdout);
+            pcCurrent++;
+        }
+
+        /* Write replacement string */
+        fputs(pcTo, stdout);
+        count++;
+
+        /* Advance past matched substring */
+        pcCurrent += fromLen;
+    }
+
+    /* Write remaining part of line */
+    fputs(pcCurrent, stdout);
+
+    return count;
 }
 
 /*--------------------------------------------------------------------*/
@@ -56,7 +95,7 @@ int main(int argc, char *argv[])
    pcTo = argv[2];
 
    while (fgets(acLine, MAX_LINE_SIZE, stdin) != NULL)
-      /* Insert your code here. */
+      uReplaceCount += replaceAndWrite(acLine, pcFrom, pcTo);
 
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
    return 0;
