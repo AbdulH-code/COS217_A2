@@ -9,16 +9,16 @@ Abdulkadir Husein
 
 #include <stddef.h>
 
-/* returns the length of a string */
+/* returns the length of the string pcSrc points to */
 size_t Str_getLength(const char *pcSrc);
 
-/* copies one string into another */
+/* copies one string, pointed to by pcSrc, into another, pointed to by pcDest. Returns pcDest. */
 char *Str_copy(char *pcDest, const char *pcSrc);
 
-/* concatenates two strings together */
+/* concatenates pcSrc string with pcDest string. Returns pcDest. */
 char *Str_concat(char *pcDest, const char *pcSrc);
 
-/* Compares two lexicographically. If the two strings are equal, 0 is returned. If s1 is greater, 1 is returned.
+/* Compares s1 and s2 lexicographically. If the two strings are equal, 0 is returned. If s1 is greater, 1 is returned.
    If s1 is less than s2, -1 is returned. */
 int Str_compare(const char *s1, const char *s2);
 

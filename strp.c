@@ -61,16 +61,16 @@ int Str_compare(const char *s1, const char *s2) {
     return 0;
 }
 
-// Returns a pointer pointing to the first char of the found s2 in s1 otherwise a null pointer if s2 is not in s1.
-// If s2 points to an empty string, s1 is returned.
 const char *Str_search(const char *s1, const char *s2) {
     const char *pcSrch1;
     const char *pcSrch2;
     const char *pcStart;
     assert(s1 != NULL);
     assert(s2 != NULL);
+    /* Returns s1 if s2 is empty */
     if (*s2 == '\0') return s1;
     pcStart = s1;
+    /* Runs through every char in s2 for each char in s1, checking if there is a match */
     while (*pcStart != '\0') {
         pcSrch1 = pcStart;
         pcSrch2 = s2;

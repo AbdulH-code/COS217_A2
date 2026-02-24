@@ -59,8 +59,10 @@ const char *Str_search(const char s1[], const char s2[]) {
     int j;
     assert(s1 != NULL);
     assert(s2 != NULL);
+    /* Returns s1 if s2 is empty */
     if (s2[0] == '\0')
         return s1;
+    /* Runs through every char in s2 for each char in s1, checking if there is a match */
     for (i = 0; s1[i] != '\0'; i++) {
         for (j = 0; s2[j] != '\0'; j++) {
             if (s1[i + j] == '\0')
