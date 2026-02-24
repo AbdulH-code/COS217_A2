@@ -53,7 +53,7 @@ static size_t replaceAndWrite(const char *pcLine,
         count++;
 
         /* Advance past matched substring */
-        pcCurrent += 1; /*fromLen;*/
+        pcCurrent += fromLen;
     }
 
     /* Write remaining part of line */
